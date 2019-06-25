@@ -1,0 +1,36 @@
+<!--pages/00index_charge/index_charge.wxml-->
+<view class="vip_wrap">
+  <view class="vip_main">
+    <view class="money">
+      <text>余额 :</text>
+      <text class="money_main">￥ {{money}}</text>
+    </view>
+    <view class="card_num">
+      <text>卡号 :</text>
+      <text class="money_main">12345678999</text>
+    </view>
+  </view>
+   <view class="charge_wrap">
+    <view class="charge">会员卡充值 :</view>
+    <view class="charge_input_wrap">
+      <input class="charge_input" type="digit" value="{{chargeInput}}" placeholder="请输入充值金额" bindinput="chargeInput"/>
+    
+    </view>
+    <view class="charge_main">
+      <view class="main_item" wx:for="{{charge}}" wx:key="*this" wx:for-index="itemindex">
+        <view class="item_row " wx:for="{{charge[itemindex]}}" wx:key="*this" wx:for-index="rowindex" wx:for-item="items">
+          <view class="item_row_main {{indexs == items.id?'show':''}}" bindtap="charges" id="{{items.money+items.give}}" data-id="{{items.id}}">
+            <image class="youhui_icon" src="../img/youhuiicon.png" hidden="{{items.give==''}}"></image>
+            <view class="charge_money">
+              <view class="">{{items.money}}元</view>
+              <view class="charge_song" hidden="{{items.give==''}}">冲{{items.money}}送{{items.give}}元</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view> 
+  
+
+  <view class="btn" hover-class="btn_active" bindtap="charge">充值</view>
+  </view>

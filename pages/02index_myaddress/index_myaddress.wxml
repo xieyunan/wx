@@ -1,0 +1,60 @@
+<!--pages/02index_myaddress/index_myaddress.wxml-->
+<view class="zanwu" hidden="{{addmain != ''}}">
+  <view class="zanwu_title">您暂时还没有设置地址。。。</view>
+
+  <navigator url="../02index_addto/index_addto" class="zanwu_btn">去设置地址</navigator>
+  <view class="zanwu_img">
+    <image src="../img/zanwubg.png"></image>
+  </view>
+</view>
+<view class="moren_add" hidden="{{addmain == ''}}">
+  <view class="moren_menu">默认地址 : </view>
+  <view class="moren_main">
+    <view class="morenadd">{{moren}}</view>
+    <view class="morenaddXX">{{morenXX}}</view>
+  </view>
+</view>
+<view class="address_wrap" hidden="{{addmain == ''}}">
+  <navigator url="../02index_addto/index_addto" class="tiianjia_add_wrap" hover-class="tiianjia_add_wrap_active">
+    <view class="tianjia_add_img">
+      <image src="../img/tianjiaadd.png"></image>
+    </view>
+    <view class="tianjia_add_font">添加收货地址</view>
+  </navigator>
+  <block wx:for="{{addmain}}" wx:key="*this">
+    <view class="old_address {{addindex==index?'active':''}}" bindtap="addshow" id="{{index}}">
+      <view class="old">
+        <view class="oldadd_item" hidden="{{addindex != index}}"></view>
+      </view>
+      <view class="old_add">
+        <view class="old_addmain">{{item.add}}</view>
+        <view class="old_addxx">{{item.addXX}}</view>
+        <view class="old_namephone">
+          <view class="phone_name">
+            <view class="name_main">
+              <view class="">联系人 :</view>
+              <view class="name">{{item.name}}</view>
+            </view>
+            <view class="name_main">
+              <view class="">联系电话 :</view>
+              <view class="name">{{item.phone}}</view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view hidden="{{addindex != index}}" class="old_add_moren" hover-class="btn_active" bindtap="moren" id="{{index}}">设为默认地址</view>
+    <view class="setupshow" hidden="{{addindex != index}}">
+      <navigator url="../02index_xiugaiadd/index_xiugaiadd" class="revise revise_line">
+        <text>修改</text>
+        <image src="../img/revise.png"></image>
+      </navigator>
+      <view class="revise" catchtap="deleteadd" data-indexs="{{index}}">
+        <text>删除</text>
+        <image src="../img/delete02.png"></image>
+      </view>
+    </view>
+
+  </block>
+</view>

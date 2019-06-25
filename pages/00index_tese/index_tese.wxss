@@ -1,0 +1,46 @@
+/* pages/00index_tese/index_tese.wxss */
+@import '../style/weui.wxss';
+.tese_wrap{
+  font-family: "微软雅黑";
+  margin-top: 10rpx;
+  background: #fff;
+}
+.tese_item{
+  padding: 20rpx;
+  height: 320rpx;
+}
+.tese_item_left{
+  float: left;
+  margin-left: 10rpx;
+}
+.tese_img>image{
+  width: 340rpx;
+  height: 230rpx;
+}
+.yang_img>image{
+  width: 22rpx;
+  height: 18rpx;
+}
+.aixin_img>image{
+  width: 26rpx;
+  height: 22rpx;
+}
+.tese_item_name{
+  padding:0 10rpx;
+  overflow: hidden;
+}
+.tese_item_num{
+  padding:0 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.yang_img{
+  font-size: 22rpx;
+  color: #ccc;
+}
+.aixin_img{
+  float: right;
+}
+.yang_img,.num{
+  float: left;
+}

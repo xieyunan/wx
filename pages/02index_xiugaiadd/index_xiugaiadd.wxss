@@ -1,0 +1,14 @@
+/* pages/02index_xiugaiadd/index_xiugaiadd.wxss */
+@import '../style/weui.wxss';
+@import '../02index_myaddress/index_myaddress.wxss';
+@import '../02index_addto/index_addto.wxss';
+.old{
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: none;
+  margin-top: 0; 
+}
+.weui-cells{
+  margin-top: 10rpx;
+}

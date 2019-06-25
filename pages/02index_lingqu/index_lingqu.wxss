@@ -1,0 +1,7 @@
+/* pages/02index_lingqu/index_lingqu.wxss */
+@import '../style/weui.wxss';
+@import '../02index_youhui/index_youhui.wxss';
+.youhui_time{
+  display: flex;
+  justify-content: space-between;
+}

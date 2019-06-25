@@ -1,0 +1,86 @@
+{
+  "pages":[
+    "pages/00index_restaurant/index",
+   "pages/02index_myxiwei/index_myxiwei",
+    "pages/02index_my/index_my",
+    
+    
+    "pages/02index_daifu/index_daifu",
+    
+   
+    "pages/00index_tese/index_tese",
+    
+    "pages/02index_lingqu/index_lingqu",
+    "pages/02index_youhui/index_youhui",
+    "pages/02index_myyouhui/index_myyouhui",
+    "pages/02index_myaddress/index_myaddress",
+    "pages/02index_dianneiDD/index_dianneiDD",
+    "pages/02index_mydingdan/index_mydingdan",
+    "pages/00index_charge/index_charge",
+    "pages/00index_vip/index_vip",
+    "pages/02index_xiugaiadd/index_xiugaiadd",
+    "pages/02index_addto/index_addto",
+    "pages/00index_yuyuexiadan/index_yuyuexiadan",
+    "pages/00index_search/index_search",
+    
+    "pages/02index_pingjia/index_pingjia",
+    "pages/00index_yudingfood/index_yudingfood",
+    "pages/00index_waimai/index_waimai",
+    "pages/02index_assess/index_assess",
+    "pages/00index_xiadan/index_xiadan",   
+    "pages/00index_xiangqing/index_xiangqing",
+    "pages/00index_yuding/index_yuding",          
+    "pages/00index_fapiao/index_fapiao",  
+    "pages/02index_maidan/index_maidan",  
+    "pages/01index_jianjie/index_jianjie",
+    "pages/01index_home/index_home", 
+    "pages/02index_yipingjia/index_yipingjia",
+    "pages/02index_weipingjia/index_weipingjia",
+    "pages/02index_tuikuan/index_tuikuan",
+     
+    "pages/02index_myxinxi/index_myxinxi",
+     
+    "pages/test/test"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "美食汇",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/00index_restaurant/index",
+        "text": "餐厅",
+        "iconPath": "pages/img/restaurant.png",
+        "selectedIconPath": "pages/img/restaurant02.png"
+      },
+      {
+        "pagePath": "pages/01index_home/index_home",
+        "text": "店铺",
+        "iconPath": "pages/img/home.png",
+        "selectedIconPath": "pages/img/home02.png"
+      },
+      {
+        "pagePath": "pages/02index_my/index_my",
+        "text": "我的",
+        "iconPath": "pages/img/my.png",
+        "selectedIconPath": "pages/img/my02.png"
+      }
+    ],
+    "backgroundColor": "#fff",
+    "color": "#000",
+    "selectedColor": "#ff253d"
+  }
+
+
+
+
+
+
+
+
+
+
+}

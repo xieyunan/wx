@@ -1,0 +1,195 @@
+/* pages/00index_xiangqing/index_xiangqing.wxss */
+@import '../style/weui.wxss';
+.xiangqing_wrap{
+  font-family: "微软雅黑";
+  line-height: 40rpx;
+  font-size: 30rpx;
+}
+.xiangqing_img>image{
+  width: 100%;
+  height: 400rpx;
+}
+.xiangqing_main{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-bottom: 10rpx;
+  padding-bottom: 10rpx;
+}
+.xiangqing_main_top{
+  width: 100%;
+  height: 180rpx;
+  padding-top: 20rpx;
+}
+.xiangqing_main_left{
+  width: 540rpx;
+  height: auto;
+  float: left;
+  padding-left:30rpx; 
+  font-size: 22rpx;
+  color: #999;
+}
+.zhuchu{
+  display: flex;
+}
+.xiangqing_left_name{
+  font-weight: 500;
+  font-size: 34rpx;
+  color: #000;
+}
+.xiangqing_left_yueshou{
+  padding-top: 6rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+.xiangqing_left_youhui{
+  font-size: 22rpx;
+  color: #ff253d;
+}
+.xiangqing_main_right{
+  height: 100%;
+  width: 150rpx;
+  float: left;  
+}
+.xiangqing_right_money{
+  display: flex;
+}
+.money_icon{
+  color: #ff253d;
+  font-size: 24rpx;
+}
+.money{
+  font-size: 40rpx;
+  font-weight: 500;
+}
+.yuanjia{
+  font-size: 22rpx;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 20rpx;
+}
+.zhuchu_name{
+  margin-right: 80rpx;
+}
+.xiangqing_main_btn{
+  color: #fff;
+  background: #ff253d;
+  height: 75rpx;
+  width: 450rpx;
+  text-align: center;
+  line-height: 75rpx;
+  border-radius: 15rpx;
+  margin: 0 auto;
+  margin-bottom: 40rpx;
+}
+.xiangqing_btn_active{
+  background: #ccc;
+}
+.miaoshu_wrap{
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+.miaoshu_title{
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+.miaoshu_main{
+  padding: 10rpx 80rpx 100rpx;
+  font-size: 26rpx;
+  line-height: 50rpx;
+}
+/* 按钮 */
+.xingqing_btn{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 30rpx;
+  color: #fff;
+  font-size: 28rpx;
+}
+.yuyue_btn{
+  width: 240rpx;
+  height: 60rpx;
+  background: #ff253d;
+  border-radius: 15rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.active_btn{
+  background: rgba(230, 230, 230,0.8)
+}
+
+/* 外卖底部 */
+
+/* .waimai_footer {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  border-top: 1px solid #ff253d;
+}
+
+.footer_left {
+  width: 20%;
+  float: left;
+}
+
+.footer_left_img {
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+}
+
+.footer_left_img>image {
+  position: relative;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.number {
+  position: absolute;
+  left: 70rpx;
+  top: 15rpx;
+  width: 26rpx;
+  height: 26rpx;
+  background: rgba(255, 255, 0, 0.9);
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 26rpx;
+  color: #ff253d;
+  border-radius: 6rpx;
+}
+
+.footer_center {
+  width: 40%;
+  height: 100%;
+  float: left;
+  margin-right: 5%;
+}
+
+.zongjia {
+  margin-top: 15rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+
+.chajia {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.footer_right {
+  width: 35%;
+  height: 100%;
+  background: #ff253d;
+  float: right;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.footer_right_active {
+  background: #999;
+} */

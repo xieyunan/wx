@@ -1,0 +1,57 @@
+<!--pages/00index_vip/index_vip.wxml-->
+<view class="vip_wrap">
+  <view class="vip_main">
+    <view class="money">
+      <text>余额 :</text>
+      <text class="money_main">￥ {{chargeBalance}}</text>
+    </view>
+    <view class="card_num">
+      <text>卡号 :</text>
+      <text class="money_main">12345678999</text>
+    </view>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="../00index_charge/index_charge" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">会员卡充值</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+  </view>
+  <view class="xiaofei_main">
+
+    <view class="xiaofei_title">
+      <view class="xiaofei_title_item">消费明细</view>
+
+    </view>
+    <block wx:for="{{xiaofei}}" wx:key="*this">
+      <view class="xiaofei_item">
+        <view class="xiaofei_item_img">
+          <image src="../img/logo.jpg"></image>
+        </view>
+        <view class="xiaofei_item_main">
+          <view class="xiaofei_item_name">{{item.name}}</view>
+          <view class="xiaofei_item_time">
+            <text class="xiaofei_date">{{item.date}}</text>
+            <text>{{item.time}}</text>
+          </view>
+        </view>
+        <view class="xiaofei_item_money">
+          <text>-{{item.money}}</text>
+        </view>
+      </view>
+    </block>
+
+
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+</view>

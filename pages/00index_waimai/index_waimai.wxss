@@ -1,0 +1,376 @@
+/* pages/00index_waimai/index_waimai.wxss */
+@import '../style/weui.wxss';
+
+page {
+  background: #fff;
+  font-family: "微软雅黑";
+  font-size: 32rpx;
+  line-height: 40rpx;
+}
+
+.weui-tab__panel {
+  padding-top: 0;
+  overflow: visible;
+}
+
+.weui-search-bar__cancel-btn{
+  color: #000;
+}
+.weui-search-bar{
+  background: #fff;
+}
+
+/* 购物车 */
+.gouwuche{
+  width: 100%;
+  height: 92%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.bgshow{
+  width: 100%;
+  height: 100%;
+}
+.shop{
+  background: #fff;
+  position: fixed;
+  margin: 0 25rpx;
+  bottom: 142rpx;
+  width: 700rpx;
+  height: 610rpx;
+  border: 1px solid #ff253d;
+  border-radius: 20rpx;
+  z-index: 999;
+
+}
+.shop_item{
+  width: 640rpx;
+  height: 120rpx;
+  padding: 30rpx;
+  display: flex;
+  border-bottom:1px solid #ccc;
+}
+.shop_item_img{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+  float: left;
+}
+.shop_item_img>image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.tianshan{
+  width: 120rpx;
+  height: 40rpx;
+  margin-top: 40rpx;
+  display: flex;
+}
+.shop_item_name{
+  width: 380rpx;
+  height: 120rpx;
+  line-height: 30rpx;
+}
+.money{
+  font-size: 28rpx;
+  color: #ff253d;
+  margin-top: 60rpx;
+}
+.tianshan_num{
+  width: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+.tianshan>image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.scrollH{
+  height: 540rpx;
+}
+.qingkong{
+  padding: 15rpx 30rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+.qingkong_img{
+  font-size: 24rpx;
+  color: #ccc;
+  display: flex;
+}
+.qingkong_img>image{
+  width: 30rpx;
+  height: 32rpx;
+  margin-left: 30rpx;
+  margin-top: 4rpx;
+}
+.zhizhen{
+  position: fixed;
+  height: 40rpx;
+  bottom: 102rpx;
+  left: 60rpx;
+}
+.zhizhen>image{
+  width: 38rpx;
+  height: 40rpx;
+}
+.please{
+  text-align: center;
+  margin-top: 100rpx;
+  font-size: 28rpx;
+  color: #ff253d;
+}
+/* 导航切换 */
+
+.weui-navbar_item, .caidan_item {
+  text-align: center;
+  width: 160rpx;
+  float: left;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #999;
+  padding: 30rpx 5rpx;
+}
+
+.weui-navbar_item:last-child {
+  float: right;
+}
+
+.weui-bar__item_on {
+  border-bottom: 2px solid #ff253d;
+  color: #ff253d;
+}
+
+.weui-navbar {
+  display: flex;
+  justify-content: space-around;
+  border: none;
+}
+
+/* 外卖切换 */
+
+.weui-tab__content {
+  width: 100%;
+  height: 100%;
+}
+
+.caidan_item {
+  float: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 24rpx;
+  color: #000;
+}
+
+.clearfix:after{
+  content: ".";
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+}
+
+.caidan_item_active {
+  color: #ff253d;
+}
+
+.caidan_wrap {
+  width: 180rpx;
+  float: left;
+}
+
+.main_cai {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100rpx;
+}
+
+.caidan_item_wrap {
+  width: 550rpx;
+  float: left;
+
+}
+
+.caidan_main {
+  width: 100%;
+}
+
+.cai_item {
+  height: 205rpx;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  display: flex;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.cai_item_img>image {
+  width: 225rpx;
+  height: 165rpx;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+
+.cai_youhui_icon>image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.cai_name {
+  font-size: 30rpx;
+  color: #000;
+  line-height: 32rpx;
+  margin-top: 20rpx;
+}
+
+.cai_yueshou {
+  margin-bottom: 26rpx;
+}
+
+.cai_money {
+  color: #000;
+  font-size: 28rpx;
+  line-height: 28rpx;
+}
+
+.shanchu {
+  color: #999;
+  font-size: 22rpx;
+  text-decoration: line-through;
+}
+
+.cai_youhui {
+  width: 270rpx;
+  display: flex;
+  line-height: 40rpx;
+  color: #ff253d;
+  justify-content: space-between;
+}
+
+.cai_youhui_icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+.cai_item_active{
+  background: rgba(230, 230, 230, 0.5);
+}
+/* 外卖底部 */
+
+.waimai_footer {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  border-top: 1px solid #ff253d;
+}
+
+.footer_left {
+  width: 20%;
+  float: left;
+}
+
+.footer_left_img {
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+}
+
+.footer_left_img>image {
+  position: relative;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.number {
+  position: absolute;
+  left: 70rpx;
+  top: 15rpx;
+  width: 26rpx;
+  height: 26rpx;
+  background: rgba(255, 255, 0, 0.9);
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 26rpx;
+  color: #ff253d;
+  border-radius: 6rpx;
+}
+
+.footer_center {
+  width: 40%;
+  height: 100%;
+  float: left;
+  margin-right: 5%;
+}
+
+.zongjia {
+  margin-top: 15rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+
+.chajia {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.footer_right {
+  width: 35%;
+  height: 100%;
+  background: #ff253d;
+  float: right;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.footer_right_active {
+  background: #999;
+}
+
+
+.dingdan {
+  width: 300rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #ff253d;
+  margin: 100rpx auto;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.dingdan_active {
+  color: #999;
+}
+
+.huodong_icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 5rpx;
+  margin-right: 20rpx;
+}
+
+.huodong_icon>image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.huodong {
+  display: flex;
+  border-bottom: 1px solid #ff253d;
+  border-top: 1px solid #ff253d;
+  padding: 0 30rpx;
+}
+
+.huodong_title {
+  line-height: 85rpx;
+  color: #ff253d;
+  font-weight: 600;
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+}

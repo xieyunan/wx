@@ -1,0 +1,107 @@
+/* pages/02index_my/index_my.wxss */
+@import '../style/weui.wxss';
+.header{
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+  background-size: 100% 100%;
+  margin-top: 10rpx; 
+  font-size: 28rpx;
+  font-family: "微软雅黑";
+}
+.header_main{
+  position: absolute;
+  height: 200rpx;
+  width: 100%;
+  top: 100rpx;
+  text-align: center;
+}
+.header_main_active{
+  background: rgba(204, 204, 204, 0.3);
+}
+.tongbu{
+  margin-top:10rpx;
+}
+.header_logo{
+  
+ 
+}
+.header_logo>image{
+  width: 125rpx;
+  height: 125rpx;
+  border-radius: 50%;
+  background: #fff;  
+}
+.header_name{
+  padding-top: 20rpx;
+}
+.home_name{
+  display:flex;
+  width: 100%;
+}
+.meishihui{
+  font-size: 38rpx;
+  margin-right: 10rpx;
+}
+.maidan{
+  margin-top: 10rpx;
+}
+.juli{
+  float: right;
+  margin-top: 90rpx;
+  margin-right: 30rpx;
+}
+.juli>image{
+  width: 20rpx;
+  height: 30rpx;
+}
+.geren{
+  line-height: 60rpx;
+}
+.weui-cell__ft>image{
+  width: 32rpx;
+  height: 36rpx;
+}
+.weui-cell{
+  padding: 15px;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  margin-bottom: 10rpx;
+}
+.waimai_wrap>image,.home_wrap>image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  margin-left: 50rpx;
+}
+.dingdan_wrap{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-bottom: 10rpx;
+  font-family: "微软雅黑";
+}
+.diandan_title{
+  padding: 30rpx 0;
+  margin: 0 30rpx;
+  line-height: 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+.dingdan_main{
+  display: flex;
+}
+.waimai_wrap,.home_wrap{
+  line-height: 50rpx;
+  width: 50%;
+  height: 50rpx;
+  display: flex;
+  font-size: 26rpx;
+  padding: 30rpx;
+
+}
+.waimai_wrap{
+  border-right: 1px solid #ccc; 
+}
+.dingdan_active{
+  background: rgba(230, 230, 230, 0.4)
+}

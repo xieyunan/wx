@@ -1,0 +1,328 @@
+/* pages/00index/index.wxss */
+@import '../style/weui.wxss';
+page{
+  font-family: "微软雅黑";
+  background: e6e6e6;
+}
+.header{
+  margin-bottom: 10rpx;
+}
+swiper-item image{
+  width: 750rpx;
+  height: 400rpx;
+}
+.swiper .wx-swiper-dot{
+  width: 20rpx;
+  height: 20rpx;
+}
+swiper{
+  height: 400rpx;
+}
+/* 分类 */
+.header_main{
+  padding: 10rpx 30rpx ;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: "微软雅黑";
+  display: flex;
+  justify-content:space-between;
+  background: #fff;
+}
+.header_main image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.header_menu{
+  padding: 10rpx;
+}
+/* 热门推荐 */
+.tuijian_wrap,.like_wrap,.xinxi_wrap{
+  padding-left:30rpx; 
+  background: #fff;
+  margin-bottom:20rpx; 
+}
+.weui-cell__bd{
+  display: flex;
+  font-size: 30rpx;
+  color: #ff253d;
+  font-family: "微软雅黑";
+  font-weight: 500;
+}
+.weui-cells:before{
+  border: none;
+}
+.weui-cells:after{
+  border: none;
+}
+.weui-cell{
+  padding: 0 30rpx 0 0 ;
+  line-height: 100rpx;
+}
+.weui-cell__hd image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.tuijian_item{
+  display: inline-block;
+  width: 280rpx;
+  margin-right: 10rpx;
+}
+.tuijian_main{
+  white-space: nowrap;
+  display: flex;
+  overflow : auto;
+}
+.tuijian_item_pingjia{
+  display: flex;
+  text-indent: 10rpx;
+  width: 100%;
+  height: 30rpx;
+}
+.tuijian_item_img{
+  height: 260rpx;
+}
+.tuijian_item_img>image{
+  width: 280rpx;
+  height: 260rpx;
+}
+.tuijian_item_name{
+  text-indent: 10rpx;
+  font-size: 27rpx;
+  font-family: "微软雅黑";
+  line-height: 30rpx;
+  padding-top:10rpx; 
+}
+.tuijian_active{
+  background: rgba(230, 230, 230, 0.5)
+}
+.number{
+  font-size: 24rpx;
+  color: #b3b3b3;
+  padding-left: 20rpx;
+  line-height: 30rpx;
+
+}
+.icon_yanjing,.icon_aixin{
+ width: 24rpx;
+ height: 30rpx;
+}
+
+.icon_yanjing>image,.icon_aixin>image,.food_jieshao_right>image{
+  width: 22rpx;
+  height: 20rpx;
+  display: block;
+  margin-top:6rpx; 
+}
+
+.icon_aixin{
+  margin-left: 115rpx;
+}
+/* 新品上市 */
+.xinpin_wrap{ 
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-bottom: 20rpx;
+} 
+.xinpin{
+  padding: 0 30rpx;
+}
+.xinpin_main{
+  padding: 0 30rpx;
+}
+.xinpin_main_slide{
+  width: 100%;
+  height: 340rpx;
+  overflow: hidden;
+  background-size: 100% 100%;
+  
+}
+.xinpin_main_left,.xinpin_main_right{
+  width: 100rpx;
+  height: 100%;
+  text-align: center;
+}
+.xinpin_main_left>image,.xinpin_main_right>image{
+  width: 20rpx;
+  height: 36rpx;
+  margin-top: 52rpx;
+}
+.xinpin_main_left>image{
+  transform: rotate(180deg);
+}
+.xinpin_main_center{
+  width: 490rpx;
+  height: 140rpx;
+  text-align: center;
+  line-height: 40rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+.slide_wrap{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
+  margin-top: 100rpx;
+}
+.xinpin_name{
+  color: #ff253d;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+.xinpin_weidao{
+  widows: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 猜你喜欢 */
+.like_img>image{
+  vertical-align: middle;
+}
+.like_wrap{
+  padding: 0 30rpx 20rpx;
+  margin-bottom: 20rpx;
+}
+.like_main_item{
+  width: 100%;
+  height: 306rpx;
+}
+.like_item_left,.like_item_right{
+  position: relative;
+  width: 341rpx;
+  height: 300rpx;
+  float: left;
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  border: 2rpx solid #fff;
+  border-radius:10rpx; 
+}
+.like_item_right{
+  float: right;
+}
+.like_left_main{
+  width: 100%;
+  color: #fff;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.food_name{
+  padding-left: 20rpx;
+  line-height: 60rpx;
+}
+.food_jieshao{
+  height: 50rpx;
+  font-size: 22rpx;
+  margin:0 20rpx; 
+}
+.food_jieshao_left{
+  float: left;
+}
+.food_jieshao_right{
+  float: right;
+  display: flex;
+}
+.food_jieshao_right>image{
+  padding-right: 10rpx;
+  margin-top: 10rpx;
+}
+.youhui_wrap{
+  width: 100%;
+  height: 340rpx;
+  background-size:100% 100%; 
+  color: #fff;
+  text-align: center;
+  margin-bottom:20rpx; 
+  font-family: "微软雅黑";
+}
+.youhui_title{
+  padding-top:80rpx; 
+}
+.youhui_link{
+  color: #fcff00;
+  font-size: 28rpx;
+  margin-top: 40rpx;
+  
+}
+/* 基本信息 */
+.xinxi_main{
+  font-size: 24rpx;
+  line-height: 80rpx;
+  font-family: "微软雅黑";
+  margin-right: 30rpx;
+}
+.address>image,.telephone>image{
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+  margin-top: 20rpx;
+}
+.tuijian_wrap_avtive{
+  background: #e6e6e6;
+}
+.hidden{
+  display: none;
+}
+.block{
+  display: block;
+}
+.xinpin_active{
+  background: rgba(230, 230, 230, 0.3);
+}
+
+/* 网友评论 */
+.pingjia_main {
+  width: 100%;
+  height: auto;
+}
+.weui-tab__content{
+  background: #fff;
+}
+.pingjia_item {
+  padding: 10rpx 0;
+  height: 160rpx;
+  margin: 0 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.pingjia_item_left {
+  width: 120rpx;
+  height: 100%;
+  float: left;
+}
+
+.pingjia_item_left>image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.pingjia_item_right {
+  width: 550rpx;
+  float: left;
+}
+
+.pingjia_item_name {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.pingjia_item_main {
+  width: 100%;
+  height: 80rpx;
+  font-size: 26rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.pingjia_item_time {
+  font-size: 22rpx;
+  color: #999;
+}

@@ -1,0 +1,116 @@
+<!--pages/00index_waimai/index_waimai.wxml-->
+<view class="weui-tab">
+  <view class="weui-tab__panel">
+    <!-- 外卖内容 -->
+    <view class="weui-tab__content">
+     <!--搜索跳转-->
+    <navigator url="../00index_search/index_search" class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}"/> 
+        </view>
+        <label class="weui-search-bar__label"  >
+            <icon class="weui-icon-search" type="search" color="#ff253d" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>   
+        </label>
+        
+      </view>
+    </navigator>
+      <!-- 优惠广告 -->
+      <view class="huodong">
+        <view class="huodong_icon">
+          <image src="../img/huodong.png"></image>
+        </view>
+        <view class="huodong_title">商家周年庆活动正在火热进行中,特大优惠!</view>
+      </view>
+      <view class="main_cai clearfix">
+        <!-- 外卖菜品切换 -->
+        <view class="caidan_wrap">
+          <block wx:for="{{tabs02}}" wx:key="*this">
+            <view id="{{index}}" data-tabsindex="{{index}}" class="caidan_item {{activeIndex02 == index ? 'caidan_item_active' : ''}}" bindtap="tab02Click">
+              <view class="caidan_item_title">{{item}}</view>
+            </view>
+          </block>
+        </view>
+        <!-- 菜单切换数据 -->
+        <view class="caidan_item_wrap">
+          <!-- 家常小吃等对应的内容 -->
+          <view class="caidan_main" hidden="{{activeIndex02 != tabs02index}}">
+            <view class="cai_item" bindtap="caixiangqing" wx:for="{{xiaochi[activeIndex02]}}" wx:key="*this" wx:for-index="listindex">
+              <view class="cai_item_img">
+                <image src="{{item.imgurl}}"></image>
+              </view>
+              <view class="cai_menu">
+                <view class="cai_name">{{item.name}}</view>
+                <view class="cai_haoping">
+                  <view class="cai_yueshou">月售{{item.yueshou}}份\r\n\r\n\r\n<text class="haoping">好评率{{item.haoping}}</text>
+                  </view>
+                </view>
+                <view class="cai_money">{{item.money}}\r\n\r\n\r\n<text class="shanchu">{{item.yuanjia}}</text></view>
+                <view class="cai_youhui">
+                  <view class="cai_youhui_left">{{item.youhui}}</view>
+                  <view class="cai_youhui_icon" catchtap="tianjia" data-numbers="{{number}}" data-youhuiindex="{{listindex}}" data-activeIndex="{{activeIndex02}}">
+                    <image src="../img/tianjia.png"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 购物车信息 -->
+      <view class="gouwuche" hidden="{{!onoff}}">
+      <view class="bgshow" bindtap="bgshow"></view>
+        <view class="shop">
+          <scroll-view scroll-y="true" class="scrollH">
+          <block wx:for="{{gouwuche}}" wx:key="*this">
+            <view class="shop_item" hidden="{{item.num==0}}">
+              <view class="shop_item_img">
+                <image src="{{item.imgurl}}"></image>
+              </view>
+              <view class="shop_item_name">
+                <view class="name">{{item.name}}</view>
+                <view class="money">￥{{item.money}}</view>
+              </view>
+              <view class="tianshan">
+                <image src="../img/jian.png" bindtap="jian" id="{{index}}"></image>
+                <text class="tianshan_num">{{item.num}}</text>
+                <image src="../img/tianjia.png" bindtap="shoptianjia" id="{{index}}"></image>
+              </view>
+            </view>
+          </block>  
+          <view class="please"hidden="{{gouwuche!=''}}">您没有选择商品</view>
+          </scroll-view>
+          <view class="qingkong">
+            <view class="qingkong_img" bindtap="qingkong">
+              <text>清空购物车</text>
+              <image src="../img/delete.png"></image>
+            </view>
+          </view>
+          <view class="zhizhen">
+            <image src="../img/zhi.png"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 底部确认 -->
+      <view class="waimai_footer">
+        <view class="footer_left">
+          <view class="footer_left_img">
+            <image src="../img/gouwuche.png" bindtap="gouwuShow"></image>
+            <view class="number">{{number}}</view>
+          </view>
+        </view>
+        <view class="footer_center">
+          <view class="zongjia">共{{objmoney}}元</view>
+          <view class="chajia" hidden="{{objmoney > qisong}}">{{qisong}}元起送
+            <text>(还差{{qisong - objmoney}}元)</text>
+          </view>
+        </view>
+        <view class="footer_right" hover-class="footer_right_active">
+          <view class="" bindtap="submit">选好了</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

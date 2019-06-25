@@ -1,0 +1,25 @@
+<!--pages/00index_tese/index_tese.wxml-->
+<view class="tese_wrap">
+
+    <view class="tese_item" wx:for="{{tesearr}}" wx:key="*this">
+      <navigator url="../00index_xiangqing/index_xiangqing" class="tese_item_left" wx:for="{{tesearr[index]}}" wx:for-item="items" wx:for-index="indexs">
+        <view class="tese_img">
+          <image src="{{items.url}}"
+          ></image>
+        </view>
+        <view class="tese_item_name">{{items.name}}</view>
+        <view class="tese_item_num">
+          <view class="yang_img">
+            <image src="../img/yanjing.png"></image>
+            {{items.num}}
+          </view>
+          <view class="aixin_img">
+            <image src="../img/aixin.png"></image>
+          </view>
+        </view>
+      </navigator>
+
+
+    </view>
+
+</view>

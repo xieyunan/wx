@@ -1,0 +1,31 @@
+/* pages/00index_charge/index_charge.wxss */
+@import '../style/weui.wxss';
+@import '../00index_vip/index_vip.wxss';
+.charge_input{
+  background: #fff;
+  width: 300rpx;
+  padding: 10rpx 0;
+  text-align: center;
+  color: #ff253d;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  border-radius: 15rpx;
+}
+.charge_input_wrap{
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.btn{
+  margin: 0 30rpx;
+  position: fixed;
+  bottom: 20rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  width: 690rpx;
+}
+.show{
+  color: #999;
+  border:1px solid #999;
+}

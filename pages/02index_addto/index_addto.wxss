@@ -1,0 +1,28 @@
+/* pages/02index_addto/index_addto.wxss */
+@import '../style/weui.wxss';
+@import '../00index_yuyuexiadan/index_yuyuexiadan.wxss';
+.addto_wrap{
+  margin-top: 10rpx;
+}
+.weui-cells{
+  margin-bottom: 10rpx;
+}
+input{
+  width: 600rpx;
+}
+.btn{
+  margin-top: 50rpx;
+}
+.weui-cell__ft{
+  width: 600rpx;
+}
+.weui-cell__bd{
+  width: 90rpx;
+}
+.weui-cell{
+  display: flex;
+}
+.diqu{
+  font-size: 24rpx;
+  font-family: "微软雅黑";
+}

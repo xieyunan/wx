@@ -1,0 +1,65 @@
+/* pages/02index_myxiwei/index_myxiwei.wxss */
+@import '../style/weui.wxss';
+.diannei_wrap{
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+}
+.dingdan_wrap{
+  margin-top: 10rpx;
+}
+.dingdan_item{
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  padding:  30rpx;
+  display: flex;
+  height: auto;
+}
+.dingdan_item_logo{
+  width: 130rpx;
+  height: 100%;
+}
+.dingdan_item_logo>image{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 10rpx;
+}
+.dingdan_item_main{
+  width: 560rpx;
+}
+.dingdan_title{
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  font-size: 32rpx;
+}
+.time{
+  color: #ccc;
+  font-size: 24rpx;
+}
+.dingdan_menu{
+  font-size: 28rpx;
+}
+.dingdan_submenu{display: flex;justify-content: space-between}
+.submenu_cai{
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+.dingdan_item_zong{
+  margin-top: 20rpx;
+}
+.zong_money{
+  font-size: 28rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+.money{
+  margin-left: 20rpx;
+}
+.submenu_cai{width: 65%}
+.submenu_num{width: 35%}
+.submenu_cai,.submenu_num{display: flex;}
+.zhuohao{color: #ff504f;margin-left: 10rpx;}
+.dao_time{display: flex;line-height: 50rpx;}
+.dao_times{width: 60%;text-align: center;color: #ff504f}

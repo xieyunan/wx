@@ -1,0 +1,196 @@
+/* pages/02index_myaddress/index_myaddress.wxss */
+@import '../style/weui.wxss';
+
+.address_wrap {
+  font-size: 28rpx;
+  font-family: "微软雅黑";
+}
+
+.address_main {
+  background: #fff;
+  margin-top: 10rpx;
+  padding: 10rpx;
+}
+
+image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.address_right {
+  display: flex;
+}
+
+.zancheng {
+  line-height: 40rpx;
+  padding-right: 30rpx;
+  color: #000;
+  font-size: 26rpx;
+}
+
+.address_btn {
+  position: fixed;
+  bottom: 0;
+  width: 700rpx;
+  padding: 25rpx 0;
+  background: #ff253d;
+  font-size: 32rpx;
+  font-family: "微软雅黑";
+  color: #fff;
+  margin: 20rpx 25rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx rgba(255, 61, 37, 0.8);
+}
+
+.btn_active {
+  background: #999;
+  box-shadow: 0 0 0 0;
+}
+
+.menpai {
+  width: 160rpx;
+}
+
+.input_style {
+  width: 540rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.old_address {
+  background: #fff;
+  margin-top: 10rpx;
+  padding: 25rpx 30rpx;
+  display: flex;
+  color: #999;
+}
+
+.old {
+  width: 40rpx;
+  height: 40rpx;
+  border: 1px solid #999;
+  border-radius: 50%;
+  margin-top: 65rpx;
+}
+
+.active {
+  color: #000;
+}
+
+.active .old {
+  border: 1px solid #ff253d;
+}
+
+.oldadd_item {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #ff253d;
+  margin-left: 7rpx;
+  margin-top: 7rpx;
+}
+
+.delete_add {
+  margin-top: 20rpx;
+}
+
+.old_add {
+  width: 570rpx;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+
+.old_addmain {
+  width: 100%;
+  overflow: hidden;
+}
+
+.zancheng {
+  width: 450rpx;
+}
+
+.tiianjia_add_wrap {
+  background: #fff;
+  padding: 20rpx 30rpx;
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+.tiianjia_add_wrap_active {
+  background: rgba(230, 230, 230, 0.5);
+}
+
+.old_namephone {
+  width: 100%;
+}
+
+.phone_name {
+  margin-top: 10rpx;
+  border-top: 1px solid #999;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+}
+
+.name_main {
+  display: flex;
+  line-height: 50rpx;
+}
+
+.name {
+  margin-left: 10rpx;
+}
+
+.active .name {
+  color: #000;
+}
+
+.setupshow {
+  padding: 20rpx 60rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.revise {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  font-size: 30rpx;
+  color: #ff253d;
+}
+
+.revise_line {
+  border-right: 1px solid #ff253d;
+}
+
+.revise>image {
+  margin-left: 20rpx;
+}
+
+.moren_add {
+  display: flex;
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+  background: #fff;
+  margin-top: 10rpx;
+  font-family: "微软雅黑";
+}
+
+.moren_main {
+  font-size: 24rpx;
+  margin-left: 15rpx;
+}
+
+.morenadd {
+  width: 520rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.old_add_moren{
+  padding: 10rpx 30rpx;
+  text-align: center;
+  color: #ff253d;
+}

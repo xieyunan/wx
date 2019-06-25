@@ -1,0 +1,51 @@
+<!--pages/02index_my/index_my.wxml-->
+<view class="header" style="background:{{headerbgSrc}}">
+  <navigator url="../02index_myxinxi/index_myxinxi" class="header_main" hover-class="header_main_active">
+    <view class="header_logo">
+      <image src="http://img5.imgtn.bdimg.com/it/u=1627954464,371046155&fm=27&gp=0.jpg"></image>
+    </view>
+    <view class="header_name">
+      <view class="meishihui">{{name}}</view>
+    </view>
+    
+  </navigator>
+</view>
+<view class="tongbu">
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="../02index_myaddress/index_myaddress" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">收货地址</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access dizhi">{{address}}</view>
+    </navigator>
+
+  </view>
+  <view class="dingdan_wrap">
+    <view class="diandan_title">我的订单</view>
+    <view class="dingdan_main">
+      <view class="waimai_wrap" hover-class="dingdan_active" bindtap="waimaiDD">
+        <image src="../img/chezi.png"></image>
+        <text class="dingdan_font">外卖订单</text>
+      </view>
+      <view class="home_wrap" hover-class="dingdan_active" bindtap="dianneiDD">
+        <image src="../img/benzi.png"></image>
+        <text class="dingdan_font">店内订单</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="../02index_youhui/index_youhui" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">优惠券</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+  </view>
+
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="../02index_myxiwei/index_myxiwei" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">席位预定订单</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+  </view>
+</view>

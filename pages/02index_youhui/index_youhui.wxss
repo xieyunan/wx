@@ -1,0 +1,103 @@
+/* pages/02index_youhui/index_youhui.wxss */
+@import '../style/weui.wxss';
+page{
+  padding-bottom:30rpx; 
+}
+.youhui_img{
+  width: 100%;
+  height: 335rpx;
+  position: relative;
+  background-size: 100% 100%;
+}
+.youhui_main{
+  color: #303030;
+  width: 490rpx;
+  height: 200rpx;
+  line-height: 200rpx;
+  font-size: 200rpx;
+  font-weight: bold;
+  font-family: "impact";
+  border-bottom: 4rpx solid #303030;
+  padding-top: 40rpx;
+  margin-left: 130rpx;
+  display: flex;
+
+}
+.youhui_man{
+  position: absolute;
+  top: 90rpx;
+  right: 147rpx;
+  width: 220rpx;
+  height: 100rpx;
+  background: #fff;
+  text-align: center;
+}
+.youhui_man_main{
+  color: #ff253d;
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+}
+.youhui_man_title{
+  font-size: 55rpx;
+  font-family: "微软雅黑";
+  letter-spacing: 6rpx;
+  line-height: 55rpx;
+  color: #303030;
+}
+.money_sign{
+  font-size: 90rpx;
+  font-family: "黑体";
+  font-weight: bold;
+  line-height: 300rpx;
+  
+}
+.youhui_image{
+  position: absolute;
+  width: 710rpx;
+  height: 325rpx;
+  left: 20rpx;
+  top: 10rpx;
+}
+.youhui_icon{
+  position: absolute;
+  right: 14rpx;
+  top: 14rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.youhui_time{
+  position: absolute;
+  width: 490rpx;
+  height: 50rpx;
+  top: 250rpx;
+  left: 130rpx;
+  font-size: 26rpx;
+  font-family: "微软雅黑";
+  line-height: 50rpx;
+  text-align: center;
+  color: #303030;
+}
+.shiyong{
+  font-size: 28rpx;
+  color: #ff253d;
+}
+.lingqu_btn{
+  color: #ff253d;
+  width: 710rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  left: 20rpx;
+  bottom: 50rpx;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  text-align: center;
+  background: #fff;
+  margin-top:60rpx;
+}
+.btn_active{
+  background: #ccc;
+}
+.hide{
+  display: none;
+}

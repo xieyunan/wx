@@ -1,0 +1,253 @@
+<!--pages/00index/index.wxml-->
+<view class="header">
+  <!-- 轮播 -->
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" indicator-color="#fff" indicator-active-color="#ff253d">
+    <block wx:for="{{arr}}" wx:key="*this">
+      <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+        <!-- <navigator url="../00index_xiangqing/index_xiangqing">
+          <image src="{{item}}" class="slide-image" />
+        </navigator> -->
+      </swiper-item>
+    </block>
+  </swiper> 
+  <!-- 分类 -->
+  <view class="header_menu">
+    <view class="header_main">
+      <navigator url="url" class="header_main_item">
+        <view>
+          <image src="../img/shop00.png"></image>
+        </view>
+        <view>店内</view>
+      </navigator>
+      <navigator url="../00index_yudingfood/index_yudingfood" class="header_main_item">
+        <view>
+          <image src="../img/food00.png"></image>
+        </view>
+        <view>美食预定</view>
+      </navigator>
+      <navigator url="../00index_vip/index_vip" class="header_main_item">
+        <view>
+          <image src="../img/vip_icon00.png"></image>
+        </view>
+        <view>会员</view>
+      </navigator>
+
+    </view>
+    <view class="header_main">
+
+      <navigator url="../00index_waimai/index_waimai" class="header_main_item">
+        <view>
+          <image src="../img/waimai00.png"></image>
+        </view>
+        <view>外卖</view>
+      </navigator>
+      <navigator url="../00index_yuding/index_yuding" class="header_main_item">
+        <view>
+          <image src="../img/table00.png"></image>
+        </view>
+        <view>席位预定</view>
+      </navigator>
+      <navigator url="../02index_maidan/index_maidan" class="header_main_item">
+        <view>
+          <image src="../img/check00.png"></image>
+        </view>
+        <view>买单</view>
+      </navigator>
+
+    </view>
+  </view>
+</view>
+
+<!-- 本店特色 -->
+<view class="xinpin_wrap" hover-class="tuijian_active">
+  <view class="weui-cells weui-cells_after-title xinpin" hover-class="tuijian_active" bindtap="tuijianXQ">
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__hd like_img">
+        <image src="../img/tuijian.png"></image>
+      </view>
+      <view class="weui-cell__bd">本店特色</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+  </view>
+  <view class="xinpin_main">
+    <block wx:for="{{xinpin}}" wx:key="*this">
+      <view class="xinpin_main_slide" style="background-image:{{item.bgsrc}}" bindtap="xinpinmenu" hidden="{{item.nums!=xinpinNum}}">
+        <view class="slide_wrap">
+          <view class="xinpin_main_left" catchtap="xinpinPrev" hover-class="xinpin_active">
+            <image src="../img/right02.png"></image>
+          </view>
+          <view class="xinpin_main_center">
+            <view class="xinpin_name">{{item.name}}</view>
+            <view class="xinpin_weidao">{{item.weidao}}</view>
+            <view class="xinpin_eat">{{item.eat}}</view>
+          </view>
+          <view class="xinpin_main_right" catchtap="xinpinNext" hover-class="xinpin_active">
+            <image src="../img/right02.png"></image>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+<!-- 今日优惠 -->
+<view class="youhui_wrap" style="background-image:{{youhuiBG}}">
+  <view class="youhui_title">大事件来了!</view>
+  <view class="">本店周年庆优惠活动即将开启!</view>
+  <view class="youhui_link">快去看看</view>
+</view>
+
+<!-- 网友评论 -->
+<view class="weui-tab__content">
+  <navigator url="../02index_assess/index_assess" class="weui-cells weui-cells_after-title xinpin" hover-class="tuijian_active">
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__hd like_img">
+        <image src="../img/assess.png"></image>
+      </view>
+      <view class="weui-cell__bd">网友评论</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+  </navigator>
+  <view class="pingjia_main">
+    <view class="pingjia_item" wx:for="{{pingjiaItem}}" wx:key="*this">
+      <view class="pingjia_item_left">
+        <image src="{{item.imgurl}}"></image>
+      </view>
+      <view class="pingjia_item_right">
+        <view class="pingjia_item_name">{{item.name}}</view>
+        <view class="pingjia_item_main">{{item.main}}</view>
+        <view class="pingjia_item_time">{{item.data}}\r\n\r\n\r\n{{item.time}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 热门推荐||本店特色 -->
+<!-- <view class="tuijian_wrap">
+  <view class="weui-cells weui-cells_after-title" >
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__hd">
+        <image src="../img/tuijian.png"></image>
+      </view>
+      <view class="weui-cell__bd">本店特色</view>
+      
+    </view>
+  </view>
+
+  <scroll-view scroll-x="true" class="tuijian_main">
+    <block wx:for="{{tese}}" wx:key="*this">
+      <view class="tuijian_item">
+        <view class="tuijian_item_img">
+          <image src="{{item.imgsrc}}" bindtap="tuijian"></image>
+        </view>
+        <view class="tuijian_item_name">
+          <text>{{item.name}}</text>
+        </view>
+        <view class="tuijian_item_pingjia">
+          <view class="icon_yanjing">
+            <image src="../img/yanjing.png"></image>
+          </view>
+          <view class="number">{{item.num}}</view>
+          <view class="icon_aixin">
+            <image src="../img/aixin.png"></image>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view> -->
+<!-- 猜你喜欢 -->
+<!-- <view class="like_wrap">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__hd like_img">
+        <image src="../img/like.png"></image>
+      </view>
+      <view class="weui-cell__bd">猜你喜欢</view>
+
+    </view>
+  </view>
+
+  <view class="like_main">
+    <block>
+      <view>
+        <view class="like_main_item" wx:for="{{like}}" wx:key="*this" wx:for-item="listitem" wx:for-index="listindex">
+          <view class="like_item_left" bindtap="like" style="background-image:{{item.bgsrc}}" wx:for="{{like[listindex]}}" wx:key="*this">
+            <view class="like_left_main">
+              <view class="food_name">{{item.name}}</view>
+              <view class="food_jieshao">
+                <view class="food_jieshao_left">{{item.weidao}}</view>
+                <view class="food_jieshao_right">
+                  <image src="../img/foodAixin.png"></image>
+                  <text class="jieshao_right_num">{{item.num}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view> -->
+
+<!-- 基本信息 -->
+<!-- <view class="xinxi_wrap">
+  <view class="menu">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__hd like_img">
+          <image src="../img/xinxi.png"></image>
+        </view>
+        <view class="weui-cell__bd">基本信息</view>
+
+      </view>
+    </view>
+  </view>
+  <view class="xinxi_main">
+    <view class="">店名 : 美食汇</view>
+    <view class="address">地址 : {{address}}
+      <image src="../img/dizhi.png" bindtap="address"></image>
+    </view>
+    <view class="telephone">电话 : {{telephone}}
+      <image src="../img/telephone.png" bindtap="telephone"></image>
+    </view>
+    <view class="">营业时间 : 00 : 00-24 : 00</view>
+  </view>
+</view> -->

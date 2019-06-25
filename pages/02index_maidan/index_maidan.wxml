@@ -1,0 +1,46 @@
+<!--pages/02index_maidan/index_maidan.wxml-->
+<view class="maidan_wrap">
+  <view class="maidan_modle {{indexs==0?'active':''}}" bindtap="total">
+    <view class="weui-cell">
+      <view class="weui-cell__bd modle_left">消费总金额 :</view>
+      <view class="weui-cell__ft modle_right">
+        <input type="text" placeholder="￥0" placeholder-class="input-placeholder" bindinput="moneyValue"/>
+      </view>
+    </view>
+  </view>
+  <view class="maidan_modle {{indexs==1?'active':''}}" bindtap="totalno">
+    <view class="weui-cell">
+      <view class="weui-cell__bd modle_left">不参与优惠金额 :</view>
+      <view class="weui-cell__ft modle_right">
+        <input type="text" placeholder="￥0" placeholder-class="input-placeholder" />
+      </view>
+    </view>
+  </view>
+  <view class="maidan_youhui" bindtap="youHui" hover-class="youhui_active">
+    <view class="youhui">优惠券</view>
+    <view class="youhui_icon">
+      <image src="../img/youhui_icon.png"></image>
+      <view class="" hidden="{{youhuiquan != ''}}">(没有优惠券可用)</view>
+    </view>
+  </view>
+  <view class="inall">
+    <view class="inall_menu">共计付款 : </view>
+    <view class="fukuan">￥{{total}}</view>
+  
+  </view>
+  <view class="submit">
+    <button class="btn" hover-class="btn_active">确认付款</button>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

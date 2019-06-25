@@ -1,0 +1,89 @@
+/* pages/02index_pingjia/index_pingjia.wxss */
+@import '../style/weui.wxss';
+@import '../02index_assess/index_assess.wxss';
+page{
+  background: rgba(230, 230, 230, 0.5);
+}
+.pingjia_wrap {
+  font-family: "微软雅黑";
+}
+
+.pingjia_main {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  padding-bottom:0; 
+}
+
+.pingjia_right>image {
+  margin-left: 30rpx;
+}
+
+.wenben {
+  margin-top: 10rpx;
+}
+
+.placeholder_style {
+  font-size: 24rpx;
+  color: #000;
+  font-family: "微软雅黑";
+}
+
+.weui-cell {
+  padding: 15px;
+}
+
+.star-image {
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  src: "../img/pingjia.png";
+  margin-right: 30rpx;
+}
+
+.item {
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  top: 0rpx;
+}
+
+.address_btn {
+  position: fixed;
+  bottom: 0;
+  width: 700rpx;
+  padding: 20rpx 0;
+  background: #ff253d;
+  font-size: 32rpx;
+  font-family: "微软雅黑";
+  color: #fff;
+  margin: 20rpx 25rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  box-shadow: 0 0 20rpx rgba(255, 37, 61, 0.8);
+}
+
+.btn_active {
+  background: #999;
+}
+.weui-uploader__file{
+  margin-bottom: 0;
+  margin-right: 20rpx;
+}
+.weui-uploader__bd {
+  margin-right: 0;
+  padding: 0 35rpx;
+
+}
+.weui-uploader__img{
+  width:180rpx;
+  height: 160rpx;
+}
+.weui-tab__content{
+  margin-top: 10rpx;
+  margin-bottom: 120rpx;
+}
+.weui-cell{
+  padding: 20rpx 30rpx;
+ 
+}
+

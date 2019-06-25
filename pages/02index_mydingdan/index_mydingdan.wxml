@@ -1,0 +1,314 @@
+<!--pages/02index_mydingdan/index_mydingdan.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px);-webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <!-- 全部 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <!-- 如果没有订单 -->
+          <view class="zanwu" hidden="{{!(wei == ''&& yi == ''&& weiping == '' && yiping == '')}}">
+            <view class="zanwu_title">您暂时还没有订单。。。</view>
+            <navigator url="../00index_waimai/index_waimai" class="zanwu_btn">去瞅瞅菜品</navigator>
+            <view class="zanwu_img">
+              <image src="../img/zanwubg.png"></image>
+            </view>
+          </view>
+
+          <!-- 有订单 -->
+          <view class="quanbu_main" hidden="{{wei == ''&& yi == ''&& weiping == '' && yiping == ''}}">
+            <!-- 未确认 -->
+            <block wx:for="{{wei}}" wx:key="*this" wx:for-item="listitem" wx:for-index="listindex">
+              <navigator url="../02index_daifu/index_daifu" class="dingdan_item">
+                <view class="dingdan_item_logo">
+                  <image src="../img/logo.jpg"></image>
+                </view>
+                <view class="dingdan_item_main">
+                  <view class="dingdan_title">
+                    <view class="title">美食汇</view>
+                    <view class="time">
+                      <view class="">待付款</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_menu" wx:for="{{listitem}}" wx:for-item="cellitem" wx:key="*this" wx:for-index="cellindex">
+                    <view class="dingdan_submenu">
+                      <view class="submenu_cai">{{cellitem.name}}</view>
+                      <view class="submenu_num">X{{cellitem.num}}</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_item_zong">
+                    <view class="zong_money">
+                      <view>共{{weinum[listindex]}}件商品</view>
+                      <view class="money">应付￥{{weimoney[listindex]}}</view>
+                    </view>
+                    <view class="dingdan_xiangqing" hover-class="xiangqing_active">详情</view>
+                  </view>
+                </view>
+              </navigator>
+            </block>
+            <!-- 已确认 -->
+            <block wx:for="{{yi}}" wx:key="*this" wx:for-item="listitem" wx:for-index="listindex">
+              <navigator url="../02index_tuikuan/index_tuikuan" class="dingdan_item">
+                <view class="dingdan_item_logo">
+                  <image src="../img/logo.jpg"></image>
+                </view>
+                <view class="dingdan_item_main">
+                  <view class="dingdan_title">
+                    <view class="title">美食汇</view>
+                    <view class="time">
+                      <view class="">待完成</view>
+                      <view class="tui">(10分钟内可退款)</view>
+
+                    </view>
+                  </view>
+                  <view class="dingdan_menu" wx:for="{{listitem}}" wx:for-item="cellitem" wx:key="*this" wx:for-index="cellindex">
+                    <view class="dingdan_submenu">
+                      <view class="submenu_cai">{{cellitem.name}}</view>
+                      <view class="submenu_num">X{{cellitem.num}}</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_item_zong">
+                    <view class="zong_money">
+                      <view>共{{yinum[listindex]}}件商品</view>
+                      <view class="money">已付￥{{yimoney[listindex]}}</view>
+                    </view>
+                    <view class="dingdan_xiangqing" hover-class="xiangqing_active">详情</view>
+                  </view>
+                </view>
+              </navigator>
+            </block>
+            <!-- 已完成未评价 -->
+            <block wx:for="{{weiping}}" wx:key="*this" wx:for-item="listitem" wx:for-index="listindex">
+              <navigator url="../02index_weipingjia/index_weipingjia" class="dingdan_item">
+                <view class="dingdan_item_logo">
+                  <image src="../img/logo.jpg"></image>
+                </view>
+                <view class="dingdan_item_main">
+                  <view class="dingdan_title">
+                    <view class="title">美食汇</view>
+                    <view class="time">
+                      <view class="">未评价</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_menu" wx:for="{{listitem}}" wx:for-item="cellitem" wx:key="*this" wx:for-index="cellindex">
+                    <view class="dingdan_submenu">
+                      <view class="submenu_cai">{{cellitem.name}}</view>
+                      <view class="submenu_num">X{{cellitem.num}}</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_item_zong">
+                    <view class="zong_money">
+                      <view>共{{weipingnum[listindex]}}件商品</view>
+                      <view class="money">已付￥{{weipingmoney[listindex]}}</view>
+                    </view>
+                    <view class="dingdan_xiangqing" hover-class="xiangqing_active">详情</view>
+                  </view>
+                </view>
+              </navigator>
+            </block>
+            <!-- 已完成已评价 -->
+            <block wx:for="{{yiping}}" wx:key="*this" wx:for-item="listitem" wx:for-index="listindex">
+              <navigator url="../02index_yipingjia/index_yipingjia" class="dingdan_item">
+                <view class="dingdan_item_logo">
+                  <image src="../img/logo.jpg"></image>
+                </view>
+                <view class="dingdan_item_main">
+                  <view class="dingdan_title">
+                    <view class="title">美食汇</view>
+                    <view class="time">
+                      <view class="">已评价</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_menu" wx:for="{{listitem}}" wx:for-item="cellitem" wx:key="*this" wx:for-index="cellindex">
+                    <view class="dingdan_submenu">
+                      <view class="submenu_cai">{{cellitem.name}}</view>
+                      <view class="submenu_num">X{{cellitem.num}}</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_item_zong">
+                    <view class="zong_money">
+                      <view>共{{yipingnum[listindex]}}件商品</view>
+                      <view class="money">已付￥{{yipingmoney[listindex]}}</view>
+                    </view>
+                    <view class="dingdan_xiangqing" hover-class="xiangqing_active">详情</view>
+                  </view>
+                </view>
+              </navigator>
+            </block>
+          </view>
+        </view>
+        <!-- 待付款 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <!-- 如果没有订单 -->
+          <view class="zanwu" hidden="{{wei != ''}}">
+            <view class="zanwu_title">您暂时还没有待付款订单。。。</view>
+
+            <navigator url="../00index_waimai/index_waimai" class="zanwu_btn">去瞅瞅菜品</navigator>
+            <view class="zanwu_img">
+             <image src="../img/zanwubg.png"></image>
+            </view>
+
+          </view>
+          <!-- 有未确认订单 -->
+          <view class="quanbu_main" hidden="{{wei == ''}}">
+            <block wx:for="{{wei}}" wx:key="*this" wx:for-item="listitem" wx:for-index="listindex">
+              <navigator url="../02index_daifu/index_daifu" class="dingdan_item">
+                <view class="dingdan_item_logo">
+                  <image src="../img/logo.jpg"></image>
+                </view>
+                <view class="dingdan_item_main">
+                  <view class="dingdan_title">
+                    <view class="title">美食汇</view>
+                    <view class="time">
+                      <view class="">待付款</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_menu" wx:for="{{listitem}}" wx:for-item="cellitem" wx:key="*this" wx:for-index="cellindex">
+                    <view class="dingdan_submenu">
+                      <view class="submenu_cai">{{cellitem.name}}</view>
+                      <view class="submenu_num">X{{cellitem.num}}</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_item_zong">
+                    <view class="zong_money">
+                      <view>共{{weinum[listindex]}}件商品</view>
+                      <view class="money">应付￥{{weimoney[listindex]}}</view>
+                    </view>
+                    <view class="dingdan_xiangqing" hover-class="xiangqing_active">详情</view>
+                  </view>
+                </view>
+              </navigator>
+            </block>
+          </view>
+        </view>
+        <!-- 已接单 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <!-- 如果没有订单 -->
+          <view class="zanwu" hidden="{{yi != ''}}">
+            <view class="zanwu_title">您暂时还没有可以退款的订单。。。</view>
+
+            <navigator url="../00index_waimai/index_waimai" class="zanwu_btn">去瞅瞅菜品</navigator>
+            <view class="zanwu_img">
+              <image src="../img/zanwubg.png"></image>
+            </view>
+
+          </view>
+          <!-- 有已确认订单 -->
+          <view class="quanbu_main" hidden="{{yi == ''}}">
+            <block wx:for="{{yi}}" wx:key="*this" wx:for-item="listitem" wx:for-index="listindex">
+              <navigator url="../02index_tuikuan/index_tuikuan" class="dingdan_item">
+                <view class="dingdan_item_logo">
+                  <image src="../img/logo.jpg"></image>
+                </view>
+                <view class="dingdan_item_main">
+                  <view class="dingdan_title">
+                    <view class="title">美食汇</view>
+                    <view class="time">
+                      <view class="">待完成</view>
+                      <view class="tui">(10分钟内可退款)</view>
+
+                    </view>
+                  </view>
+                  <view class="dingdan_menu" wx:for="{{listitem}}" wx:for-item="cellitem" wx:key="*this" wx:for-index="cellindex">
+                    <view class="dingdan_submenu">
+                      <view class="submenu_cai">{{cellitem.name}}</view>
+                      <view class="submenu_num">X{{cellitem.num}}</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_item_zong">
+                    <view class="zong_money">
+                      <view>共{{yinum[listindex]}}件商品</view>
+                      <view class="money">已付￥{{yimoney[listindex]}}</view>
+                    </view>
+                    <view class="dingdan_xiangqing" hover-class="xiangqing_active">详情</view>
+                  </view>
+                </view>
+              </navigator>
+            </block>
+          </view>
+
+        </view>
+        <!-- 已完成 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <!-- 如果没有订单 -->
+          <view class="zanwu" hidden="{{!(weiping == ''&&yiping=='')}}">
+            <view class="zanwu_title">您暂时还没有订单。。。</view>
+
+            <navigator url="../00index_waimai/index_waimai" class="zanwu_btn">去瞅瞅菜品</navigator>
+            <view class="zanwu_img">
+              <image src="../img/zanwubg.png"></image>
+            </view>
+          </view>
+          <!-- 有已完成订单 -->
+          <view class="quanbu_main" hidden="{{weiping == ''&&yiping==''}}">
+            <!-- 已完成未评价 -->
+            <block wx:for="{{weiping}}" wx:key="*this" wx:for-item="listitem" wx:for-index="listindex">
+              <navigator url="../02index_weipingjia/index_weipingjia" class="dingdan_item">
+                <view class="dingdan_item_logo">
+                  <image src="../img/logo.jpg"></image>
+                </view>
+                <view class="dingdan_item_main">
+                  <view class="dingdan_title">
+                    <view class="title">美食汇</view>
+                    <view class="time">
+                      <view class="">未评价</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_menu" wx:for="{{listitem}}" wx:for-item="cellitem" wx:key="*this" wx:for-index="cellindex">
+                    <view class="dingdan_submenu">
+                      <view class="submenu_cai">{{cellitem.name}}</view>
+                      <view class="submenu_num">X{{cellitem.num}}</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_item_zong">
+                    <view class="zong_money">
+                      <view>共{{weipingnum[listindex]}}件商品</view>
+                      <view class="money">已付￥{{weipingmoney[listindex]}}</view>
+                    </view>
+                    <view class="dingdan_xiangqing" hover-class="xiangqing_active">详情</view>
+                  </view>
+                </view>
+              </navigator>
+            </block>
+            <!-- 已完成已评价 -->
+            <block wx:for="{{yiping}}" wx:key="*this" wx:for-item="listitem" wx:for-index="listindex">
+              <navigator url="../02index_yipingjia/index_yipingjia" class="dingdan_item">
+                <view class="dingdan_item_logo">
+                  <image src="../img/logo.jpg"></image>
+                </view>
+                <view class="dingdan_item_main">
+                  <view class="dingdan_title">
+                    <view class="title">美食汇</view>
+                    <view class="time">
+                      <view class="">已评价</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_menu" wx:for="{{listitem}}" wx:for-item="cellitem" wx:key="*this" wx:for-index="cellindex">
+                    <view class="dingdan_submenu">
+                      <view class="submenu_cai">{{cellitem.name}}</view>
+                      <view class="submenu_num">X{{cellitem.num}}</view>
+                    </view>
+                  </view>
+                  <view class="dingdan_item_zong">
+                    <view class="zong_money">
+                      <view>共{{yipingnum[listindex]}}件商品</view>
+                      <view class="money">已付￥{{yipingmoney[listindex]}}</view>
+                    </view>
+                    <view class="dingdan_xiangqing" hover-class="xiangqing_active">详情</view>
+                  </view>
+                </view>
+              </navigator>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

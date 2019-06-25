@@ -1,0 +1,99 @@
+/* pages/02index_mydingdan/index_mydingdan.wxss */
+@import '../style/weui.wxss';
+page{
+  width: 100%;
+  height: 100%;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  color: #999;
+}
+.weui-navbar{
+  background: #fff;
+
+}
+.weui-navbar__item{
+  line-height: 40rpx;
+  height: 40rpx;
+  padding: 26rpx 0;
+}
+.weui-navbar__title{
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.dingdan_item{
+  color: #000;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  padding:  30rpx;
+  display: flex;
+  height: auto;
+}
+.dingdan_item_logo{
+  width: 130rpx;
+  height: 100%;
+}
+.dingdan_item_logo>image{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 10rpx;
+}
+.dingdan_item_main{
+  width: 560rpx;
+}
+.dingdan_title{
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  font-size: 32rpx;
+}
+.time{
+  text-align: center;
+  color: #ff253d;
+  font-size: 28rpx;
+  line-height: 28rpx;
+}
+.tui{
+  font-size: 22rpx;
+}
+.dingdan_menu{
+  font-size: 28rpx;
+}
+.dingdan_submenu{
+  display: flex;
+  justify-content: space-between;
+}
+.submenu_cai{
+  color: #ccc;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+.dingdan_item_zong{
+  display: flex;
+  margin-top: 20rpx;
+  justify-content: space-between;
+}
+.zong_money{
+  font-size: 28rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+.money{
+  margin-left: 20rpx;
+}
+.dingdan_xiangqing{
+  line-height: 60rpx;
+  color: #fff;
+  width: 125rpx;
+  height: 60rpx;
+  background: #ff253d;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  
+}
+.xiangqing_active{
+  background: rgba(230, 230, 230, 0.8)
+}

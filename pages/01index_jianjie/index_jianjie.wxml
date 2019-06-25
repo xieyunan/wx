@@ -1,0 +1,9 @@
+<!--pages/01index_jianjie/index_jianjie.wxml-->
+<view class="jianjie_wrap">
+  <view class="jianjie_title">文章标题</view>
+  <view class="jianjie_time">2017-08-30\r\n\r\n\r\n\r\n\r\n15 : 35</view>
+  <block wx:for="{{jianjie}}">
+    <view class="jianjie_main">{{item.main}}</view>
+    <view class="jianjie_img"><image src="{{item.src}}"></image></view>
+  </block>
+</view>

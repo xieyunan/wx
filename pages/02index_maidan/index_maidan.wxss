@@ -1,0 +1,71 @@
+/* pages/02index_maidan/index_maidan.wxss */
+@import '../style/weui.wxss';
+.maidan_wrap{
+  font-family: "微软雅黑";
+}
+.maidan_modle{
+  display: flex;
+  margin: 20rpx 25rpx;
+  background: #fff;
+  line-height: 1.4rem;
+  padding: 20rpx 30rpx;
+  border-radius: 15rpx;  
+  color: #999;
+}
+.active{
+  border: 1px solid #ff253d;
+  color: #000;
+}
+.weui-cell{
+  padding: 0;
+}
+.modle_left{
+  width: 240rpx;
+  font-size: 26rpx;
+}
+.modle_right{
+  width: 400rpx;
+}
+.active .input-placeholder{
+  color: #000;
+}
+input{
+  color: #ff253d;
+}
+.maidan_youhui{
+  margin:50rpx  0;
+  background: #fff; 
+  padding:  25rpx;
+  display: flex;
+  justify-content: space-between;
+  line-height: 50rpx;
+
+  font-size: 32rpx;
+}
+.youhui_icon{
+  color: #999;
+  font-size: 26rpx;
+  display: flex;
+}
+.youhui_icon>image{
+  width: 48rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.youhui_active{
+  background: rgba(230, 230, 230, 0.5);
+}
+.inall{
+  padding: 10rpx 50rpx;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+.inall_menu{
+  color: #ff253d;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.fukuan{
+  font-size: 32rpx;
+}

@@ -1,0 +1,48 @@
+<!--pages/02index_myxiwei/index_myxiwei.wxml-->
+<view class="zanwu" hidden="{{arr != ''}}">
+  <view class="zanwu_title">您暂时还没有席位订单。。。</view>
+  <navigator url="../00index_yuding/index_yuding" class="zanwu_btn">去预定席位</navigator>
+  <view class="zanwu_img">
+    <image src="../img/zanwubg.png"></image>
+  </view>
+</view>
+<view class="diannei_wrap" hidden="{{arr == ''}}">
+  <view class="dingdan_wrap">
+    <block wx:for="{{arr}}" wx:key="*this">
+      <view class="dingdan_item">
+        <view class="dingdan_item_logo">
+          <image src="../img/logo.jpg"></image>
+        </view>
+        <view class="dingdan_item_main">
+          <view class="dingdan_title">
+            <view class="title">美食汇</view>
+            <view class="time">{{item.date}}</view>
+          </view>
+          <view class="dingdan_menu">
+            <view class='dao_time'>
+              <view class='dao_tit'>吃饭时间\r\n:</view>
+              <view class="dao_times">{{item.time}}</view>
+            </view>
+            <view class="dingdan_submenu">
+              <view class="submenu_cai">
+                  <view>预定桌号/包厢\r\n:</view>
+                  <view class='zhuohao'>{{item.name}}</view>
+              
+              
+              </view>
+              <view class="submenu_num">
+                <view>预定人数\r\n:</view>
+                <view class='zhuohao'>{{item.num}}人</view>
+              
+              </view>
+            </view>
+            <view>
+            
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

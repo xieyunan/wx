@@ -1,0 +1,10 @@
+/* pages/02index_myyouhui/index_myyouhui.wxss */
+@import '../style/weui.wxss';
+@import '../02index_youhui/index_youhui.wxss';
+.youhui_time{
+  justify-content: space-between;
+}
+.youhui_time{
+  display: flex;
+  justify-content: space-between;
+}

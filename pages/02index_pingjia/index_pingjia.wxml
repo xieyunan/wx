@@ -1,0 +1,75 @@
+<!--pages/02index_pingjia/index_pingjia.wxml-->
+<view class="pingjia_wrap">
+  <view class="weui-cells weui-cells_after-title pingjia_main">
+    <view class="weui-cell ">
+      <view class="weui-cell__bd">评分 : </view>
+      <block wx:for="{{stars}}">
+        <image class="star-image" style="left: {{item*75+370}}rpx" src="{{key > item ?selectedSrc : normalSrc}}">
+          <view class="item" data-key="{{item+1}}" bindtap="select"></view>
+        </image>
+      </block>
+    </view>
+
+    
+    <view class="weui-cell wenben">
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" placeholder-class="placeholder_style" placeholder="说点什么吧~" style="height: 240rpx;" />
+      </view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <view class="weui-uploader__title">图片上传</view>
+            <view class="weui-uploader__info">{{files.length}}/3</view>
+          </view>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for="{{files}}" wx:key="*this">
+                <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                </view>
+              </block>
+
+
+            </view>
+            <view class="weui-uploader__input-box" hidden="{{files.length == 3}}">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    
+
+  </view>
+  </view>
+  
+  <view class="weui-tab__content">
+    <view class="pingjia_title">
+      网友评论
+    </view>
+    <view class="pingjia_main">
+      <view class="pingjia_item" wx:for="{{pingjiaItem}}" wx:key="*this">
+        <view class="pingjia_item_left">
+          <image src="{{item.imgurl}}"></image>
+        </view>
+        <view class="pingjia_item_right">
+          <view class="pingjia_item_name">{{item.name}}</view>
+          <view class="pingjia_item_main">{{item.main}}</view>
+          <view class="pingjia_item_img" hidden="{{pingjiaImg[index]==''}}">
+            <image src="{{pingjiaImg[index][0]}}" bindtap="yulanone" data-src="{{pingjiaImg[index][0]}}" id="{{index}}"></image>
+            <image src="{{pingjiaImg[index][1]}}" bindtap="yulantwo" data-src="{{pingjiaImg[index][1]}}" id="{{index}}"></image>
+            <image src="{{pingjiaImg[index][2]}}" bindtap="yulanthree" data-src="{{pingjiaImg[index][2]}}" id="{{index}}"></image>
+          </view>
+          <view class="pingjia_item_time">{{item.data}}\r\n\r\n\r\n{{item.time}}</view>
+        </view>
+      </view>
+
+
+
+    </view>
+
+
+  </view>
+  <view class="address_btn" hover-class="btn_active" bindtap="submit">提交</view>
+</view>

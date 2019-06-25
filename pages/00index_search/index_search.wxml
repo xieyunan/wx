@@ -1,0 +1,48 @@
+<!--pages/00index_search/index_search.wxml-->
+<view class="page">
+
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+
+        <view class="weui-search-bar__box">
+          <image src="../img/search.png" class="weui-icon-search_in-box"></image>
+          <input type="text" class="weui-search-bar__input" placeholder="菜品关键字" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="search_btn" hover-class="btn_active" bindtap="inputBtn">搜索</view>
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" color="#ff253d" size="14"></icon>
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+  <view class="search_history">
+    <view class="history_title">搜索历史 :</view>
+    <view class="history_main">
+      <view class="history_item">
+        <view class="history_item_main">黑木耳莴笋炒肉</view>
+        <view class="history_item_main">黑木耳莴笋炒肉</view>
+      </view>
+      <view class="history_item">
+        <view class="history_item_main">黑木耳莴笋炒肉</view>
+        <view class="history_item_main">黑木耳莴笋炒肉</view>
+      </view>
+      <view class="history_item">
+        <view class="history_item_main">黑木耳莴笋炒肉</view>
+        <view class="history_item_main">黑木耳莴笋炒肉</view>
+      </view>
+      <view class="history_item">
+        <view class="history_item_main">黑木耳莴笋炒肉</view>
+        <view class="history_item_main">黑木耳莴笋炒肉</view>
+      </view>
+    </view>
+  </view>
+  <view class="clear_history">
+  <view class="clear_history_main" hover-class="clear_active" bindtap="clearHistory">
+    <view class="">清除历史记录</view>
+    <image src="../img/delete02.png"></image>
+    </view>
+  </view>
+</view>

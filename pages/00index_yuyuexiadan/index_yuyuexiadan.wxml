@@ -1,0 +1,102 @@
+<!--pages/00index_yuyuexiadan/index_yuyuexiadan.wxml-->
+<view class="waimai__content">
+ 
+  <view class="xiadan_main">
+    <view class="xiadan_main_title">美食汇</view>
+    <view class="xiadan_main_item">
+      <block wx:for="{{foodarr}}" wx:for-item="items">
+        <view class="item_xinxi">
+          <view class="item_xinxi_name">{{items.name}}</view>
+          <view class="item_xinxi_num">X {{items.num}}</view>
+          <view class="item_xinxi_money">￥{{items.yuanjia}}</view>
+        </view>
+      </block>
+      <view class="xiadan_peisong">
+        <view class="peisong">配送费</view>
+        <view class="peisong_money">￥0</view>
+      </view>
+      <view class="xiadan_tejia">
+        <view class="tejia">商品特价</view>
+        <view class="tejia_money">-￥{{tejia}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="xiadan_youhui" bindtap="youHui" hover-class="youhui_active">
+    <view class="youhui">优惠券</view>
+    <view class="youhui_icon">
+      <image src="../img/youhui_icon.png"></image>
+      <view class="" hidden="{{youhuiquan != ''}}">(没有优惠券可用)</view>
+    </view>
+  </view>
+  <view class="xianyou">
+    <view class="xianyou_title">现有空位</view>
+    <view class="xianyou_main">
+      <!-- 桌位 -->
+      <scroll-view scroll-x="true" class="kongwei_scroll">
+        <block wx:for="{{table}}">
+          <view class="zhuowei_item" bindtap="zhuowei" id="{{index}}">
+            <view>{{item}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="zhuowei_menu">
+    <view class="zhuowei_menu_item">预定桌位/包厢 : </view>
+    <view class="zhuowei_value">{{yudingValue}}</view>
+  </view>
+  <picker class="weui-btn" mode="time" value="{{time}}" start="00:01" end="23:59" bindchange="bindTimeChange">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">用餐时间</view>
+        <view class="weui-cell__ft">{{time}}</view>
+      </view>
+    </view>
+  </picker>
+  <!-- 用餐人数 -->
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">用餐人数</view>
+      <view class="weui-cell__ft">
+        <input type="text" placeholder="1" placeholder-class="input-placeholder" />
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells weui-cells_after-title beizhu">
+    <view class="weui-cell wenben">
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" placeholder="请输入补充说明~" style="height: 260rpx;" />
+        <view class="weui-textarea-counter">0/200</view>
+      </view>
+    </view>
+  </view>
+  <view class="xiadan_zongjia">
+    <view class="zongjia">共计</view>
+    <view class="zongjia_num">￥{{zongjia}}</view>
+  </view>
+  <view class="xiadan_zhifu">
+    <view class="zhifu_title">请选择支付方式</view>
+    <view class="zhifu_mode">
+      <view class="weixin" bindtap="weixin" data-zhifuid="0">
+        <image src="../img/yuanquan.png" ></image>
+        <text class="xuanze">微信支付</text>
+        <image class="gou" src="../img/gou.png" hidden="{{indexs != 0}}"></image>
+      </view>
+      <view class="xianjin" bindtap="xianjin" data-zhifuid="1">
+        <image src="../img/yuanquan02.png" ></image>
+        <text class="xuanze">会员卡支付</text>
+        <image class="gou" src="../img/gou02.png" hidden="{{indexs != 1}}"></image>
+      </view>
+
+    </view>
+
+  </view>
+  <view class="xiadan_liji tuikuan">
+    <view class="liji">*注意 : <text class="liji_time"></text>就餐前20分钟内可致电退款</view>
+    <view class="prompt">美食预定仅限当天</view>
+  </view>
+  <view class="xiadan_btn">
+    <view class="btn" hover-class="btn_active" bindtap="dianneiZF">确认支付</view>
+
+  </view>
+</view>

@@ -1,0 +1,34 @@
+<!--pages/02index_myyouhui/index_myyouhui.wxml-->
+<view class="zanwu" hidden="{{stars != ''}}">
+  <view class="zanwu_title">您暂时还没有优惠券。。。</view>
+  <navigator url="../02index_lingqu/index_lingqu" class="zanwu_btn">去领取优惠券</navigator>
+  <view class="zanwu_img">
+    <image src="../img/zanwubg.png"></image>
+  </view>
+</view>
+<view hidden="{{stars == ''}}">
+  <view wx:for="{{stars}}" wx:key="*this">
+    <view class="youhui_img" style="{{item.num==0?weiyongImg:yiyongImg}}">
+      <view class="youhui_main">
+        <view class="money_sign">￥</view>
+        <view class="money_value">{{item.money}}</view>
+
+      </view>
+      <view class="youhui_man">
+        <view class="youhui_man_main">满{{item.man}}元使用</view>
+        <view class="youhui_man_title">优惠券</view>
+      </view>
+      <image hidden="{{item.num==0}}" src="../img/shanchu.png" class="youhui_icon" bindtap="hideImg" id="{{index}}"></image>
+
+
+
+      <view class="youhui_time">
+        <view class="time">有效期至-{{item.time}}</view>
+        <view class="{{item.num==0?'shiyong':''}}" bindtap="shiyong" id="{{index}}">{{item.yong}}</view>
+        
+      </view>
+    </view>
+
+  </view>
+  <navigator url="../02index_lingqu/index_lingqu" class="lingqu_btn" hover-class="btn_active">去领优惠券</navigator>
+</view>

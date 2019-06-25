@@ -1,0 +1,49 @@
+<!--pages/02index_yipingjia/index_yipingjia.wxml-->
+<view class="xiadan_wrap">
+
+  <view class="xiadan_main">
+    <view class="xiadan_main_title">美食汇</view>
+    <view class="xiadan_main_item">
+      <view class="xiadan_peisong">
+        <view class="peisong">订单号</view>
+        <view class="peisong_money">{{danhao}}</view>
+      </view>
+      <block wx:for="{{foodarr}}" wx:for-item="items">
+        <view class="item_xinxi">
+          <view class="item_xinxi_name">{{items.name}}</view>
+          <view class="item_xinxi_num">X {{items.num}}</view>
+          <view class="item_xinxi_money">￥{{items.yuanjia}}</view>
+        </view>
+      </block>
+      <view class="xiadan_peisong">
+        <view class="peisong">配送费</view>
+        <view class="peisong_money">￥0</view>
+      </view>
+      <view class="xiadan_tejia">
+        <view class="tejia">商品特价</view>
+        <view class="tejia_money">-￥{{tejia}}</view>
+      </view>
+      <view class="xiadan_tejia">
+        <view class="tejia">实际付款</view>
+        <view class="tejia_money">￥{{zongjia}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="xiadan_address">
+    <view class="address_menu">收货地址 : </view>
+    <view class="address_main">
+      <view class="address">{{address}}</view>
+      <view class="address_xiangxi">{{addressXX}}</view>
+    </view>
+  </view>
+
+  <view class="xiadan_beizhu">
+    <view class="beizhu">备注 : </view>
+    <view class="beizhu_main">{{beizhu}} </view>
+  </view>
+  <view class="xiadan_beizhu">
+    <view class="beizhu">订单状态 : </view>
+    <view class="beizhu_main daifu">已完成</view>
+  </view>
+  
+</view>

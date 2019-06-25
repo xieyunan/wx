@@ -1,0 +1,52 @@
+<!--pages/02index_myxinxi/index_myxinxi.wxml-->
+<view class="xinxi_wrap">
+  <view class="xinxi_header">
+    <view class="xinxi_img">
+      <image src="http://img5.imgtn.bdimg.com/it/u=1627954464,371046155&fm=27&gp=0.jpg"></image>
+    </view>
+    <view class="xinxi_name">嘻嘻</view>
+
+  </view>
+  <view class="xinxi_main">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">姓名 : </view>
+        <view class="weui-cell__ft">
+          <input class="input_style" type="text" placeholder="嘻嘻" placeholder-class="input-placeholder" />
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">性别 : </view>
+        <view class="weui-cell__ft sex">
+          <view class="man {{sex == 1 ? 'sex_active':''}}">
+            <image id="1" src="../img/yuanquan.png" bindtap="sexman"></image>
+            <text>男</text>
+            <view class="img_active"></view>
+          </view>
+          <view class="woman {{sex == 0 ? 'sex_active':''}}">
+            <image id="0" src="../img/yuanquan.png" bindtap="sexwoman"></image>
+            <text>女</text>
+            <view class="img_active"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">手机号 : </view>
+        <view class="weui-cell__ft">
+          <input class="input_style" type="text" placeholder="请正确填写手机号" placeholder-class="input-placeholder" />
+        </view>
+      </view>
+    </view>
+    
+  </view>
+
+  <!-- 按钮 -->
+  <view class="xinxi_btn" bindtap="tjbaocun">
+    <view class="btn" hover-class="btn_active">提交保存</view>
+  </view>
+
+</view>

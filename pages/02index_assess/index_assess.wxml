@@ -1,0 +1,30 @@
+<!--pages/02index_assess/index_assess.wxml-->
+<!-- 评价内容 -->
+<view class="weui-tab__content">
+  <view class="pingjia_title">
+    网友评论
+  </view>
+  <view class="pingjia_main">
+    <view class="pingjia_item" wx:for="{{pingjiaItem}}" wx:key="*this">
+      <view class="pingjia_item_left">
+        <image src="{{item.imgurl}}"></image>
+      </view>
+      <view class="pingjia_item_right">
+        <view class="pingjia_item_name">{{item.name}}</view>
+        <view class="pingjia_item_main">{{item.main}}</view>
+        <view class="pingjia_item_img" hidden="{{pingjiaImg[index]==''}}">
+          <image src="{{pingjiaImg[index][0]}}" bindtap="yulanone" data-src="{{pingjiaImg[index][0]}}" id="{{index}}"></image>
+          <image src="{{pingjiaImg[index][1]}}" bindtap="yulantwo" data-src="{{pingjiaImg[index][1]}}" id="{{index}}"></image>
+          <image src="{{pingjiaImg[index][2]}}" bindtap="yulanthree" data-src="{{pingjiaImg[index][2]}}" id="{{index}}"></image>
+        </view>
+        <view class="pingjia_item_time">{{item.data}}\r\n\r\n\r\n{{item.time}}</view>
+      </view>
+    </view>
+
+
+
+
+  </view>
+
+
+</view>

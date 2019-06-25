@@ -1,0 +1,55 @@
+<!--pages/00index_fapiao/index_fapiao.wxml-->
+<view class="fapiao_wrap">
+  <view class="fapiao_personal" bindtap="personal">
+    <view class="fapiao_img">
+      <image class="yuanquan" src="../img/yuanquan.png"></image>
+      <text class="fapiao_menu {{indexs==0?'active':''}}">个人</text>
+      <image class="gou" src="../img/gou.png" hidden="{{indexs!=0}}"></image>
+    </view>
+
+    <view class="fapiao_down">
+      <image src="{{indexs==0?'../img/down.png':'../img/up.png'}}"></image>
+    </view>
+  </view>
+  <view class="personal_name" hidden="{{indexs!=0}}">
+    <view class="name_input">
+      <view class="classname">姓名:</view>
+      <input type="text" />
+    </view>
+
+  </view>
+  <view class="fapiao_personal qiye" bindtap="qiye">
+    <view class="fapiao_img">
+      <image class="yuanquan" src="../img/yuanquan.png"></image>
+      <text class="fapiao_menu {{indexs==1?'active':''}}">企业</text>
+      <image class="gou" src="../img/gou.png" hidden="{{indexs!=1}}"></image>
+    </view>
+
+    <view class="fapiao_down">
+      <image src="{{indexs==1?'../img/down.png':'../img/up.png'}}"></image>
+    </view>
+  </view>
+  <view class="personal_name" hidden="{{indexs!=1}}">
+    <view class="name_input name">
+      <view>企业名称 :</view>
+      <input type="text" />
+    </view>
+    <view class="name_input">
+      <view>企业税号 :</view>
+      <input type="text" />
+    </view>
+  </view>
+
+
+  <view class="submit">
+  
+    <button class="btn" hover-class="btn_active" bindtap="wancheng">完成</button>
+  </view>
+
+
+
+
+
+
+
+</view>

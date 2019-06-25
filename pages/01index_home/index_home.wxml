@@ -1,0 +1,85 @@
+<!--pages/01index_home/index_home.wxml-->
+<!-- 头部 -->
+<view class="header" style="background-image:{{headerbgSrc}}">
+  <view class="header_main">
+    <view class="header_logo">
+      <image src="../img/logo.jpg"></image>
+    </view>
+    <view class="header_name">
+      <view class="home_name">
+        <view class="meishihui">美食汇</view>
+        <view class="xingxing">
+          <image src="../img/xingxing.png"></image>
+          <image src="../img/xingxing.png"></image>
+          <image src="../img/xingxing.png"></image>
+          <image src="../img/xingxing.png"></image>
+          <image src="../img/xingxing.png"></image>
+        </view>
+        <view class="juli">约0.1公里</view>
+      </view>
+      <view class="wifi">wifi</view>
+      <view class="header_address">{{address}}</view>
+    </view>
+  </view>
+</view>
+<!-- 店铺展示 -->
+<view class="dianpu_wrap">
+  <view class="zhanshi">店铺展示 : </view>
+  <view class="dianpu_main">
+    <view class="dianpu_item">
+      <scroll-view scroll-x="true" class="zhanshi_main">
+        <block wx:for="{{zhanshiImg}}">
+          <view class="img_wrap">
+            <image class="zhanshi_img" src="{{item}}" data-src="{{item}}" bindtap="yulan"></image>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+
+  </view>
+</view>
+<!-- 联系电话 -->
+<view class="telephone_wrap">
+  <view class="telephone_item">联系电话 :</view>
+  <view class="telephone_item telephone">{{telephone}}</view>
+  <image src="../img/telephone.png" bindtap="telephone"></image>
+</view>
+<!-- 地址 -->
+<view class="telephone_wrap">
+  <view class="telephone_item">联系地址 :</view>
+  <view class="telephone_item telephone">{{address}}</view>
+  <image src="../img/dizhi.png" bindtap="address"></image>
+</view>
+<!-- 营业时间 -->
+<view class="telephone_wrap">
+  <view class="telephone_item">营业时间 :</view>
+  <view class="telephone_item telephone">00 : 00-24 : 00</view>
+  
+</view>
+
+<!-- 店铺主营 -->
+<view class="telephone_wrap">
+  <view class="telephone_item">店铺主营 :</view>
+  <view class="telephone_item telephone">美食</view>
+</view>
+<!-- 店铺简介 -->
+<view class=" telephone_wrap jianjie_wrap" hover-class="jianjie_active" bindtap="jianjie">
+  <view class="telephone_item">店铺简介 :</view>
+  <view class="jianjie">
+    简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介 简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简内容。
+
+  </view>
+</view>
+<!-- 店铺资质 -->
+<view class=" telephone_wrap jianjie_wrap home_wrap">
+  <view class="telephone_item">店铺资质 :</view>
+  <view class="jianjie zhizhao">
+    <scroll-view scroll-x="true" class="zhanshi_main">
+        <block wx:for="{{zizhiImg}}">
+          <view class="img_wrap">
+            <image class="zhanshi_img" src="{{item}}" data-src="{{item}}" bindtap="zizhiyulan"></image>
+          </view>
+        </block>
+      </scroll-view>
+  </view>
+</view>

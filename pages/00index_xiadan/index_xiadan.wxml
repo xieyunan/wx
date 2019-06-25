@@ -1,0 +1,107 @@
+<!--pages/00index_xiadan/index_xiadan.wxml-->
+<view class="xiadan_wrap">
+  <view class="" hidden="{{address==''}}">
+    <view class="xiadan_address">
+      <view class="address_menu">收货地址 : </view>
+      <view class="address_main">
+        <view class="address">{{address[0]}}</view>
+        <view class="address_xiangxi">{{address[1]}}</view>
+      </view>
+    </view>
+    <navigator url="../02index_xiugaiadd/index_xiugaiadd" class="xiugai_wrap">
+      <view class="xiugai">修改收货地址</view>
+      <view class="xiugai_img">
+        <image src="../img/xiugai.png"></image>
+      </view>
+    </navigator>
+  </view>
+  <navigator url="../02index_myaddress/index_myaddress" class="tianjia_add" hidden="{{address!=''}}">
+    <view class="tianjia_add_img">
+      <image src="../img/tianjiaadd.png"></image>
+    </view>
+    <view class="tianjia_add_font">添加收货地址</view>
+  </navigator>
+</view>
+
+<!-- 外卖下单 -->
+<view class="waimai__content">
+  <view class="xiadan_main">
+    <view class="xiadan_main_title">美食汇</view>
+    <view class="xiadan_main_item">
+      <block wx:for="{{foodarr}}" wx:for-item="items">
+        <view class="item_xinxi">
+          <view class="item_xinxi_name">{{items.name}}</view>
+          <view class="item_xinxi_num">X {{items.num}}</view>
+          <view class="item_xinxi_money">￥{{items.yuanjia}}</view>
+        </view>
+      </block>
+      <view class="xiadan_peisong">
+        <view class="peisong">配送费</view>
+        <view class="peisong_money">￥0</view>
+      </view>
+      <view class="xiadan_tejia">
+        <view class="tejia">商品特价</view>
+        <view class="tejia_money">-￥{{tejia}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="xiadan_youhui" bindtap="youHui" hover-class="youhui_active">
+    <view class="youhui">优惠券</view>
+    <view class="youhui_icon">
+      <image src="../img/youhui_icon.png"></image>
+      <view class="" hidden="{{youhuiquan != ''}}">(没有优惠券可用)</view>
+    </view>
+  </view>
+  <view class="weui-cells weui-cells_after-title beizhu">
+    <view class="weui-cell wenben">
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" placeholder="请输入补充说明~" style="height: 260rpx;" />
+        <view class="weui-textarea-counter">0/200</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="fapiao_wrap">
+    <view class="fapiao_menu">是否需要发票</view>
+    <view class="fapiao_main">
+      <view class="fapiao_yes {{fapiaoindex==1?'fapiao_active':''}}" bindtap="fapiaoyes" data-fapiaoid="1">
+        <view class="fapiao_dian"></view>
+        <view class="">是</view>
+      </view>
+      <view class="fapiao_no {{fapiaoindex==0?'fapiao_active':''}}" bindtap="fapiaono" data-fapiaoid="0">
+        <view class="fapiao_dian"></view>
+        <view class="">否</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="xiadan_zongjia">
+    <view class="zongjia">共计</view>
+    <view class="zongjia_num">￥{{zongjia}}</view>
+  </view>
+  <view class="xiadan_zhifu">
+    <view class="zhifu_title">请选择支付方式</view>
+    <view class="zhifu_mode">
+      <view class="weixin" data-zhifuid="0" bindtap="weixin">
+        <image src="../img/yuanquan.png"></image>
+        <text class="xuanze">微信支付</text>
+        <image class="gou" src="../img/gou.png" hidden="{{indexs != 0}}"></image>
+      </view>
+      <view class="xianjin" data-zhifuid="1" bindtap="xianjin">
+        <image src="../img/yuanquan02.png"></image>
+        <text class="xuanze">会员卡支付</text>
+        <image class="gou" src="../img/gou02.png" hidden="{{indexs != 1}}"></image>
+      </view>
+
+    </view>
+
+  </view>
+  <view class="xiadan_liji">
+    <view class="liji">立即配送 : 约<text class="liji_time">{{peisongTime}}</text>送达</view>
+  </view>
+  <view class="xiadan_btn">
+    <view class="btn" hover-class="btn_active" bindtap="waimaiZF">确认支付</view>
+
+  </view>
+</view>
+<!-- 店内下单 -->

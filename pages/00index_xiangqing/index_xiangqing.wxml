@@ -1,0 +1,64 @@
+<!--pages/00index_xiangqing/index_xiangqing.wxml-->
+<view class="xiangqing_wrap">
+  <view class="xiangqing_img">
+    <image src="http://img0.imgtn.bdimg.com/it/u=200987110,409871336&fm=27&gp=0.jpg"></image>
+  </view>
+  <view class="xiangqing_main">
+    <view class="xiangqing_main_top">
+      <view class="xiangqing_main_left">
+        <view class="xiangqing_left_name">{{xiangqing.name}}</view>
+        <view class="xiangqing_left_yueshou">月售{{xiangqing.yueshou}}份\r\n\r\n\r\n好评率{{xiangqing.haoping}}</view>
+        <view class="gongneng">补气血、减肥防癌治便秘、清肠胃</view>
+        <view class="zhuchu">
+          <view class="zhuchu_name">厨师 : 张三</view>
+          <view class="jingyan">8年经验</view>
+        </view>
+      </view>
+      <view class="xiangqing_main_right">
+        <view class="xiangqing_right_money">
+          <view class="money_icon">￥<text class="money">{{xiangqing.money}}</text></view>
+          <view class="yuanjia">{{xiangqing.yuanjia}}</view>
+        </view>
+        <view class="xiangqing_left_youhui">商家特价优惠</view>
+      </view>
+    </view>
+    <view class="xingqing_btn">
+      <view class="yuyue_btn" bindtap="yuyue" hover-class="active_btn">美食预约</view>
+      <view class="yuyue_btn" bindtap="waimai" hover-class="active_btn">外卖</view>
+    
+    </view>
+    <!-- <view class="xiangqing_main_btn" hover-class="xiangqing_btn_active" bindtap="jiaru">加入购物车</view> -->
+  </view>
+  <!-- 商品描述 -->
+  <view class="miaoshu_wrap">
+    <view class="miaoshu_title">商品描述</view>
+    <view class="miaoshu_main">
+      {{xiangqing.miaoshu}}
+    </view>
+  </view>
+  <!-- 底部确认 -->
+  <!-- <view class="waimai_footer">
+    <view class="footer_left">
+      <view class="footer_left_img">
+        <image src="../img/gouwuche.png"></image>
+        <view class="number">{{number}}</view>
+      </view>
+    </view>
+    <view class="footer_center">
+      <view class="zongjia">共{{xiangqing.money}}元</view>
+      <view class="chajia">20元起送
+        <text wx:if="{{xiangqing.money < 20}}">(还差{{20 - xiangqing.money}}元)</text>
+        <text wx:else>(达到配送要求)</text>
+      </view>
+    </view>
+    <view class="footer_right" hover-class="footer_right_active" bindtap="maidan">
+      <view >选好了</view>
+    </view>
+  </view> -->
+
+
+
+
+
+
+</view>

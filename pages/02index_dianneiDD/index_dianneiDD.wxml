@@ -1,0 +1,37 @@
+<!--pages/02index_dianneiDD/index_dianneiDD.wxml-->
+<view class="zanwu" hidden="{{arr != ''}}">
+  <view class="zanwu_title">您暂时还没有订单。。。</view>
+  <navigator url="../00index_yudingfood/index_yudingfood" class="zanwu_btn">去瞅瞅菜品</navigator>
+  <view class="zanwu_img">
+    <image src="../img/zanwubg.png"></image>
+  </view>
+</view>
+<view class="diannei_wrap" hidden="{{arr == ''}}">
+  <view class="dingdan_wrap">
+    <block wx:for="{{arr}}" wx:key="*this" wx:for-item="listitem" wx:for-index="listindex">
+      <view class="dingdan_item">
+        <view class="dingdan_item_logo">
+          <image src="../img/logo.jpg"></image>
+        </view>
+        <view class="dingdan_item_main">
+          <view class="dingdan_title">
+            <view class="title">美食汇</view>
+            <view class="time">{{date}}\r\n\r\n\r\n\r\n{{time[listindex]}}</view>
+          </view>
+          <view class="dingdan_menu" wx:for="{{listitem}}" wx:for-item="cellitem" wx:key="*this" wx:for-index="cellindex">
+            <view class="dingdan_submenu">
+              <view class="submenu_cai">{{cellitem.name}}</view>
+              <view class="submenu_num">X{{cellitem.num}}</view>
+            </view>
+          </view>
+          <view class="dingdan_item_zong">
+            <view class="zong_money">
+              <view>共{{number[listindex]}}件商品</view>
+              <view class="money">已付￥{{money[listindex]}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

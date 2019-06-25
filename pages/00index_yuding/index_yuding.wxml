@@ -1,0 +1,89 @@
+<!--pages/00index_yuding/index_yuding.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view>
+
+      <!-- 席位预定内容 -->
+      <view class="xiwei_wrap">
+        <view class="xianyou">
+          <view class="xianyou_title">现有空位</view>
+          <view class="xianyou_main">
+            <!-- 桌位 -->
+            <scroll-view scroll-x="true" class="kongwei_scroll">
+              <block wx:for="{{table}}">
+                <view class="zhuowei_item" bindtap="zhuowei" id="{{index}}">
+                  <view>{{item}}</view>
+                </view>
+              </block>
+            </scroll-view>
+          </view>
+        </view>
+        <view class="zhuowei_menu">
+          <view class="zhuowei_menu_item">预定桌位/包厢 : </view>
+          <view class="yuding_table">{{yudingInput}}</view>
+          
+        </view>
+        <!-- 日期 -->
+        
+        <picker class="weui-btn" mode="date" value="{{date}}" start="{{date}}" end="2117-09-01" bindchange="bindDateChange">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+              <view class="weui-cell__bd">预定日期</view>
+              <view class="weui-cell__ft">{{date}}</view>
+            </view>
+          </view>
+        </picker>
+        <!-- 时间  -->
+        <picker class="weui-btn" mode="time" value="{{time}}" start="00:01" end="23:59" bindchange="bindTimeChange">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+              <view class="weui-cell__bd">用餐时间</view>
+              <view class="weui-cell__ft">{{time}}</view>
+            </view>
+          </view>
+        </picker>
+        <!-- 用餐人数 -->
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">用餐人数</view>
+            <view class="weui-cell__ft">
+              <input type="text" placeholder="1" placeholder-class="input-placeholder" />
+            </view>
+          </view>
+        </view>
+        <!-- 预定人 -->
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">预订人</view>
+            <view class="weui-cell__ft">
+              <input type="text" placeholder="您的姓名" placeholder-class="input-placeholder" />
+            </view>
+          </view>
+        </view>
+        <!-- 手机号 -->
+        <view class="weui-cells weui-cells_after-title input_last">
+          <view class="weui-cell phone">
+            <view class="weui-cell__bd">手机号</view>
+            <view class="weui-cell__ft">
+              <input type="number" placeholder="您的手机号" placeholder-class="input-placeholder" />
+            </view>
+          </view>
+        </view>
+        <!-- 补充说明 -->
+          <view class="weui-cells weui-cells_after-title buchong">
+            <view class="weui-cell wenben">
+              <view class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输入补充说明~" style="height: 260rpx;" />
+                <view class="weui-textarea-counter">0/200</view>
+              </view>
+            </view>
+          </view>
+        <!-- 提交按钮 -->
+        <button class="submit btn" hover-class="btn_active" bindtap="xiweiSubmit">确认并提交</button>
+
+
+      </view>
+    </view>
+
+  </view>
+</view>
